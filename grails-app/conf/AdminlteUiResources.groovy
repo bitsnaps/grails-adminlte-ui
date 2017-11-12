@@ -1,5 +1,6 @@
 // resource declarations for Resources plugin
 modules = {
+	
   'adminlte-core' {
     dependsOn 'adminlte-deps'
     resource url: [plugin: 'adminlte-ui', dir: 'AdminLTE/css', file: 'AdminLTE.css']
@@ -9,6 +10,10 @@ modules = {
   'adminlte-deps' {
     dependsOn 'jquery' // TODO: it has to be at least 2.0.2
     dependsOn 'jquery-ui'
+    
+	resource url: [plugin: 'adminlte-ui', dir: 'AdminLTE/css', file: 'bootstrap-table.min.css']
+    resource url: [plugin: 'adminlte-ui', dir: 'AdminLTE/js', file: 'bootstrap-table.min.js']
+	
     //dependsOn 'bootstrap' // requires a fix in Config.groovy for g:paginate and seems to do more than needed
     // AdminLTE uses Twitter Bootstrap 3.0.2 originally
     resource url: [plugin: 'adminlte-ui', dir: 'AdminLTE/css', file: 'bootstrap.min.css']

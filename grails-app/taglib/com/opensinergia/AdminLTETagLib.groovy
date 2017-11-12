@@ -147,4 +147,25 @@ class AdminLTETagLib {
         }
         template  //return map
     }
+	
+	def table = { attrs, body ->
+		
+		def bodyContent = body()
+		
+        def controller = attrs['controller'] ?: ""
+        def action = attrs['action'] ?: ""
+		
+		out << "<table data-toggle=\"table\""
+		out << " data-url=\"${g.createLink(controller: controller, action: action)}\""
+
+		out << ">"
+		// out << " <thead></thead>"
+		// out << "<tbody></tbody>"
+		
+		if (bodyContent)
+			out << bodyContent
+		
+		out << "</table>"
+		
+	}
 }
