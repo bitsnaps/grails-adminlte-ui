@@ -1,3 +1,9 @@
+# Update 2017:
+- update for Grails 2.4.4 (not 2.2.4 as stated in commit msg)
+- update some css & js
+N.B. for Grails3 check out:
+https://github.com/bitsnaps/grails-3.0.9-bootstrap-adminlte
+
 adminlte-ui: a Grails plugin for installing the AdminLTE template
 =================================================================
 
